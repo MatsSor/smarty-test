@@ -1,9 +1,12 @@
 <?php 
 	include('../libs/smarty-3.1.29/libs/Smarty.class.php');
+	include('config.php');
 
 	$smarty = new Smarty;
-	$smarty->assign('name', 'george smith');
-	$smarty->assign('address', '45th & harris');
+	$smarty->debugging = true;
+	$smarty->caching = true;
+	$smarty->cache_lifetime = 120;
+	
 
 	$smarty->display('index.tpl');
 
